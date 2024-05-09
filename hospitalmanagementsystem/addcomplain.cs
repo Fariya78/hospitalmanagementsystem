@@ -19,6 +19,19 @@ namespace hospitalmanagementsystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+        }
+        public void clear()
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+        }
+
+        private void submit_button1_Click(object sender, EventArgs e)
+        {
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 c1.name = textBox1.Text;
@@ -31,14 +44,6 @@ namespace hospitalmanagementsystem
                 clear();
             }
             else { MessageBox.Show("complain not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-        }
-        public void clear()
-        {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
         }
     }
 }
