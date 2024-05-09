@@ -27,27 +27,9 @@ namespace hospitalmanagementsystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && comboBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
-            {
-                di.id = textBox8.Text;
-                di.name = textBox1.Text;
-                di.age = textBox3.Text;
-                di.gender = comboBox2.Text;
-                di.phone = textBox4.Text;
-                di.password = textBox5.Text;
-                di.address = textBox6.Text;
-                di.email = textBox7.Text;
-                
-                di.insertrecord();
-                cleardata();
-                dataGridView1.DataSource = di.displaydata();
-               
-                
-            }
-            else { MessageBox.Show("doctor not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
         }
-        
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -103,7 +85,26 @@ namespace hospitalmanagementsystem
             textBox8.Clear();
         }
 
-       
-       
+        private void INSERT_button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && comboBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
+            {
+                di.id = textBox8.Text;
+                di.name = textBox1.Text;
+                di.age = textBox3.Text;
+                di.gender = comboBox2.Text;
+                di.phone = textBox4.Text;
+                di.password = textBox5.Text;
+                di.address = textBox6.Text;
+                di.email = textBox7.Text;
+
+                di.insertrecord();
+                cleardata();
+                dataGridView1.DataSource = di.displaydata();
+
+
+            }
+            else { MessageBox.Show("doctor not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }s
+        }
     }
 }
