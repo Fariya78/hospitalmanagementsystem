@@ -24,9 +24,7 @@ namespace hospitalmanagementsystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            loginas la = new loginas();
-            la.Show();
-            this.Hide();
+
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
@@ -39,6 +37,14 @@ namespace hospitalmanagementsystem
         {
             appointment a = new appointment();
             a.Show();
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+
+            loginas la = new loginas();
+            la.Show();
+            this.Hide();
         }
     }
 }

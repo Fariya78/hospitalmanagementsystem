@@ -33,7 +33,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.logout = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -47,7 +47,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(959, 595);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -85,15 +85,15 @@
             this.label7.TabIndex = 27;
             this.label7.Text = "HOSPITAL MANAGEMENT SYSTEM";
             // 
-            // button1
+            // logout
             // 
-            this.button1.Location = new System.Drawing.Point(871, 556);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "LOGOUT";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.logout.Location = new System.Drawing.Point(871, 556);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(75, 23);
+            this.logout.TabIndex = 28;
+            this.logout.Text = "LOGOUT";
+            this.logout.UseVisualStyleBackColor = true;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // pictureBox9
             // 
@@ -146,7 +146,7 @@
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox4);
@@ -168,7 +168,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button logout;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox10;

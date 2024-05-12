@@ -37,6 +37,7 @@ namespace hospitalmanagementsystem
                 dataGridView2.DataSource = md.displaymedicine();
             }
             else { MessageBox.Show("medicine not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
         }
         public void cleardata()
         {
@@ -113,6 +114,66 @@ namespace hospitalmanagementsystem
             textBox6.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             textBox7.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             textBox8.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+        }
+
+        private void insert_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
+            {
+
+                md.id = textBox1.Text;
+                md.date = textBox2.Text;
+                md.medname = textBox3.Text;
+                md.quantity = textBox4.Text;
+                md.payment = textBox5.Text;
+                md.company = textBox6.Text;
+                md.seller = textBox7.Text;
+                md.status = textBox8.Text;
+
+                md.insertmedicine();
+                cleardata();
+                dataGridView1.DataSource = md.displayonemedicine();
+                dataGridView2.DataSource = md.displaymedicine();
+            }
+            else { MessageBox.Show("medicine not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            md.id = textBox1.Text;
+            md.date = textBox2.Text;
+            md.medname = textBox3.Text;
+            md.quantity = textBox4.Text;
+            md.payment = textBox5.Text;
+            md.company = textBox6.Text;
+            md.seller = textBox7.Text;
+            md.status = textBox8.Text;
+
+            md.updatemedicine();
+            cleardata();
+            dataGridView1.DataSource = md.displayonemedicine();
+            dataGridView2.DataSource = md.displaymedicine();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            md.id = textBox1.Text;
+            md.deletemedicine();
+            cleardata();
+            dataGridView1.DataSource = md.displayonemedicine();
+            dataGridView2.DataSource = md.displaymedicine();
+        }
+
+        private void display_Click(object sender, EventArgs e)
+        {
+
+            md.id = textBox1.Text;
+
+            md.displayonemedicine();
+            cleardata();
+            dataGridView1.DataSource = md.displayonemedicine();
+            dataGridView2.DataSource = md.displaymedicine();
         }
     }
 }

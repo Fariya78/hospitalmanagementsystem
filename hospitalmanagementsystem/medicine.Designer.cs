@@ -44,10 +44,10 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.insert = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
+            this.display = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
@@ -193,45 +193,45 @@
             this.textBox7.Size = new System.Drawing.Size(129, 24);
             this.textBox7.TabIndex = 23;
             // 
-            // button1
+            // insert
             // 
-            this.button1.Location = new System.Drawing.Point(45, 412);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "INSERT";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.insert.Location = new System.Drawing.Point(45, 412);
+            this.insert.Name = "insert";
+            this.insert.Size = new System.Drawing.Size(75, 32);
+            this.insert.TabIndex = 24;
+            this.insert.Text = "INSERT";
+            this.insert.UseVisualStyleBackColor = true;
+            this.insert.Click += new System.EventHandler(this.insert_Click);
             // 
-            // button2
+            // update
             // 
-            this.button2.Location = new System.Drawing.Point(157, 412);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 32);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "UPDATE";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.update.Location = new System.Drawing.Point(157, 412);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(75, 32);
+            this.update.TabIndex = 25;
+            this.update.Text = "UPDATE";
+            this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
-            // button3
+            // delete
             // 
-            this.button3.Location = new System.Drawing.Point(275, 412);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 32);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "DELETE";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.delete.Location = new System.Drawing.Point(275, 412);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(75, 32);
+            this.delete.TabIndex = 26;
+            this.delete.Text = "DELETE";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
-            // button4
+            // display
             // 
-            this.button4.Location = new System.Drawing.Point(394, 412);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 32);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "DISPLAY";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.display.Location = new System.Drawing.Point(394, 412);
+            this.display.Name = "display";
+            this.display.Size = new System.Drawing.Size(75, 32);
+            this.display.TabIndex = 27;
+            this.display.Text = "DISPLAY";
+            this.display.UseVisualStyleBackColor = true;
+            this.display.Click += new System.EventHandler(this.display_Click);
             // 
             // dataGridView1
             // 
@@ -278,10 +278,10 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.display);
+            this.Controls.Add(this.delete);
+            this.Controls.Add(this.update);
+            this.Controls.Add(this.insert);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -325,10 +325,10 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button insert;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button display;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label8;

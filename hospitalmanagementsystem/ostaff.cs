@@ -19,7 +19,7 @@ namespace hospitalmanagementsystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text!= "" && comboBox1.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
+            if (textBox1.Text != "" && textBox2.Text != "" && comboBox1.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 s.id = textBox1.Text;
                 s.name = textBox2.Text;
@@ -90,8 +90,39 @@ namespace hospitalmanagementsystem
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+        private void insert_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && comboBox1.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
+            {
+                s.id = textBox1.Text;
+                s.name = textBox2.Text;
+                s.gender = comboBox1.Text;
+                s.position = textBox3.Text;
+                s.address = textBox4.Text;
+                s.phone = textBox5.Text;
 
+                s.addstaff();
+                dataGridView1.DataSource = s.displaystaff();
+                gridview();
+                clear();
 
-       
+            }
+            else { MessageBox.Show("staff not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            s.id = textBox1.Text;
+            s.name = textBox2.Text;
+            s.gender = comboBox1.Text;
+            s.position = textBox3.Text;
+            s.address = textBox4.Text;
+            s.phone = textBox5.Text;
+
+            s.updatestaff();
+            dataGridView1.DataSource = s.displaystaff();
+            gridview();
+            clear();
+        }
     }
 }

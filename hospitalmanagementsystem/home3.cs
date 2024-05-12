@@ -28,13 +28,6 @@ namespace hospitalmanagementsystem
             ap.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            loginas la = new loginas();
-            la.Show();
-            this.Hide();
-        }
-
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             appointment a = new appointment();
@@ -56,6 +49,18 @@ namespace hospitalmanagementsystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void home3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            loginas la = new loginas();
+            la.Show();
+            this.Hide();
         }
     }
 }

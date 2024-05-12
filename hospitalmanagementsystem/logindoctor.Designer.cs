@@ -35,8 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.login = new System.Windows.Forms.Button();
+            this.back_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +70,7 @@
             this.label1.Size = new System.Drawing.Size(51, 18);
             this.label1.TabIndex = 11;
             this.label1.Text = "NAME";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -97,33 +98,33 @@
             this.textBox2.Size = new System.Drawing.Size(149, 24);
             this.textBox2.TabIndex = 15;
             // 
-            // button1
+            // login
             // 
-            this.button1.Location = new System.Drawing.Point(312, 288);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 32);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.login.Location = new System.Drawing.Point(312, 288);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(86, 32);
+            this.login.TabIndex = 16;
+            this.login.Text = "LOGIN";
+            this.login.UseVisualStyleBackColor = true;
+            this.login.Click += new System.EventHandler(this.login_Click);
             // 
-            // button2
+            // back_btn
             // 
-            this.button2.Location = new System.Drawing.Point(704, 534);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 23);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "BACK";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.back_btn.Location = new System.Drawing.Point(704, 534);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(86, 23);
+            this.back_btn.TabIndex = 19;
+            this.back_btn.Text = "BACK";
+            this.back_btn.UseVisualStyleBackColor = true;
+            this.back_btn.Click += new System.EventHandler(this.back_Click);
             // 
             // logindoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 569);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.back_btn);
+            this.Controls.Add(this.login);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -146,7 +147,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button login;
+        private System.Windows.Forms.Button back_btn;
     }
 }
