@@ -104,7 +104,7 @@ namespace hospitalmanagementsystem
 
 
             }
-            else { MessageBox.Show("doctor not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }s
+            else { MessageBox.Show("doctor not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
     }
 }

@@ -39,11 +39,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
+            this.display = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.insert = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -158,35 +159,35 @@
             this.comboBox2.Size = new System.Drawing.Size(129, 24);
             this.comboBox2.TabIndex = 11;
             // 
-            // button2
+            // update
             // 
-            this.button2.Location = new System.Drawing.Point(637, 162);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 30);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "UPDATE";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.update.Location = new System.Drawing.Point(637, 162);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(75, 30);
+            this.update.TabIndex = 18;
+            this.update.Text = "UPDATE";
+            this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
-            // button3
+            // delete
             // 
-            this.button3.Location = new System.Drawing.Point(771, 162);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 30);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "DELETE";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.delete.Location = new System.Drawing.Point(771, 162);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(75, 30);
+            this.delete.TabIndex = 19;
+            this.delete.Text = "DELETE";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
-            // button4
+            // display
             // 
-            this.button4.Location = new System.Drawing.Point(637, 245);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 30);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "DISPLAY";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.display.Location = new System.Drawing.Point(637, 245);
+            this.display.Name = "display";
+            this.display.Size = new System.Drawing.Size(75, 30);
+            this.display.TabIndex = 20;
+            this.display.Text = "DISPLAY";
+            this.display.UseVisualStyleBackColor = true;
+            this.display.Click += new System.EventHandler(this.display_Click);
             // 
             // dataGridView1
             // 
@@ -198,15 +199,15 @@
             this.dataGridView1.TabIndex = 21;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
-            // button1
+            // insert
             // 
-            this.button1.Location = new System.Drawing.Point(517, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "INSERT";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.insert.Location = new System.Drawing.Point(517, 159);
+            this.insert.Name = "insert";
+            this.insert.Size = new System.Drawing.Size(75, 30);
+            this.insert.TabIndex = 22;
+            this.insert.Text = "INSERT";
+            this.insert.UseVisualStyleBackColor = true;
+            this.insert.Click += new System.EventHandler(this.room_Click);
             // 
             // label6
             // 
@@ -255,11 +256,11 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.insert);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.display);
+            this.Controls.Add(this.delete);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
@@ -291,11 +292,11 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button display;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label7;

@@ -30,14 +30,14 @@ namespace hospitalmanagementsystem
                 ar.status = comboBox2.Text;
 
                 ar.insertroom();
-                
+
                 cleardata();
                 dataGridView1.DataSource = ar.displayroom();
 
             }
-            else { MessageBox.Show("room not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            else { MessageBox.Show("room not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
 
-            
         }
         public void cleardata()
         {
@@ -88,7 +88,25 @@ namespace hospitalmanagementsystem
             dataGridView1.DataSource = ar.displayroom();
         }
 
+        private void room_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && comboBox1.Text != "" && textBox3.Text != "" && textBox2.Text != "" && comboBox2.Text != "" && textBox4.Text != "")
+            {
+                ar.rid = textBox4.Text;
+                ar.rname = textBox1.Text;
+                ar.id = textBox3.Text;
+                ar.name = textBox2.Text;
+                ar.ward = comboBox1.Text;
+                ar.status = comboBox2.Text;
 
-       
+                ar.insertroom();
+                
+                cleardata();
+                dataGridView1.DataSource = ar.displayroom();
+
+            }
+            else { MessageBox.Show("room not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+        }
     }
 }

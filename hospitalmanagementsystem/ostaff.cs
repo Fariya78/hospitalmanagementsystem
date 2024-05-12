@@ -124,5 +124,21 @@ namespace hospitalmanagementsystem
             gridview();
             clear();
         }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            s.id = textBox1.Text;
+            s.deletestaff();
+            dataGridView1.DataSource = s.displaystaff();
+            gridview();
+            clear();
+        }
+
+        private void display_Click(object sender, EventArgs e)
+        {
+
+            dataGridView1.DataSource = s.displaystaff();
+            gridview();
+        }
     }
 }

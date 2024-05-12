@@ -56,9 +56,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(-8, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(901, 446);
+            this.pictureBox1.Size = new System.Drawing.Size(907, 442);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -108,7 +108,7 @@
             // 
             // logout
             // 
-            this.logout.Location = new System.Drawing.Point(804, 450);
+            this.logout.Location = new System.Drawing.Point(771, 420);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(75, 23);
             this.logout.TabIndex = 30;
@@ -150,7 +150,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(432, 372);
+            this.pictureBox9.Location = new System.Drawing.Point(424, 378);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(100, 82);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -162,7 +162,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(437, 334);
+            this.label6.Location = new System.Drawing.Point(429, 340);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 18);
             this.label6.TabIndex = 41;

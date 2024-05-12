@@ -43,8 +43,8 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.insert = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
+            this.display = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -182,25 +182,25 @@
             this.update.UseVisualStyleBackColor = true;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
-            // button3
+            // delete
             // 
-            this.button3.Location = new System.Drawing.Point(757, 111);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 30);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "DELETE";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.delete.Location = new System.Drawing.Point(757, 111);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(75, 30);
+            this.delete.TabIndex = 26;
+            this.delete.Text = "DELETE";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
-            // button4
+            // display
             // 
-            this.button4.Location = new System.Drawing.Point(659, 180);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 30);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "DISPLAY";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.display.Location = new System.Drawing.Point(659, 180);
+            this.display.Name = "display";
+            this.display.Size = new System.Drawing.Size(75, 30);
+            this.display.TabIndex = 27;
+            this.display.Text = "DISPLAY";
+            this.display.UseVisualStyleBackColor = true;
+            this.display.Click += new System.EventHandler(this.display_Click);
             // 
             // comboBox1
             // 
@@ -242,8 +242,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.display);
+            this.Controls.Add(this.delete);
             this.Controls.Add(this.update);
             this.Controls.Add(this.insert);
             this.Controls.Add(this.textBox5);
@@ -283,8 +283,8 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Button update;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button display;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;

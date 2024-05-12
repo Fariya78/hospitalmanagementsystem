@@ -41,9 +41,7 @@ namespace hospitalmanagementsystem
 
     private void button2_Click(object sender, EventArgs e)
         {
-            loginas la = new loginas();
-            la.Show();
-            this.Hide();
+
         }
 
         private void login_Click(object sender, EventArgs e)

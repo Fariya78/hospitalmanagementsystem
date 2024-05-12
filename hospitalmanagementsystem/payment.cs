@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace hospitalmanagementsystem
 {
@@ -30,8 +31,8 @@ namespace hospitalmanagementsystem
                 p.tcharges = Convert.ToInt32(textBox6.Text);
                 gridview();
                 p.paymentadd();
-                
-                
+
+
                 cleardata();
                 dataGridView1.DataSource = p.displaydata();
             }
@@ -106,15 +107,89 @@ namespace hospitalmanagementsystem
 
         private void button5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString(label7.Text + "\n\n\n\n\n \n\n\n " + label1.Text + "\t" + textBox1.Text + "\n" + label2.Text + "\t" + textBox2.Text + "\n" + label3.Text + "\t" + textBox3.Text + "\n" + label4.Text + "\t" + textBox4.Text + "\n" + label5.Text + "\t" + textBox5.Text + "\n" + label6.Text + "\t" + textBox6.Text, new Font("Century Gothic", 24, FontStyle.Regular), Brushes.Black, new Point(230));
+
+        }
+
+        private void insert_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "")
+            {
+                p.challan = Convert.ToInt32(textBox1.Text);
+                p.pname = textBox2.Text;
+                p.dfee = Convert.ToInt32(textBox3.Text);
+                p.rcharges = Convert.ToInt32(textBox4.Text);
+                p.acharges = Convert.ToInt32(textBox5.Text);
+                p.tcharges = Convert.ToInt32(textBox6.Text);
+                gridview();
+                p.paymentadd();
+
+
+                cleardata();
+                dataGridView1.DataSource = p.displaydata();
+            }
+            else { MessageBox.Show("payment not inserted", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+
+            p.challan = Convert.ToInt32(textBox1.Text);
+            p.pname = textBox2.Text;
+            p.dfee = Convert.ToInt32(textBox3.Text);
+            p.rcharges = Convert.ToInt32(textBox4.Text);
+            p.acharges = Convert.ToInt32(textBox5.Text);
+            p.tcharges = Convert.ToInt32(textBox6.Text);
+
+            p.uppayment();
+            gridview();
+            cleardata();
+            dataGridView1.DataSource = p.displaydata();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+
+            p.challan = Convert.ToInt32(textBox1.Text);
+
+            p.delpayment();
+
+            gridview();
+            cleardata();
+
+            dataGridView1.DataSource = p.displaydata();
+
+        }
+
+        private void display_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = p.displaydata();
+            gridview();
+        }
+
+        private void print_Click(object sender, EventArgs e)
+        {
             if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
                 printDocument1.Print();
             }
         }
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void add_Click(object sender, EventArgs e)
         {
-            e.Graphics.DrawString(label7.Text + "\n\n\n\n\n \n\n\n " + label1.Text + "\t" + textBox1.Text + "\n" + label2.Text + "\t" + textBox2.Text + "\n" + label3.Text + "\t" + textBox3.Text + "\n" + label4.Text + "\t" + textBox4.Text + "\n" + label5.Text + "\t" + textBox5.Text + "\n" + label6.Text + "\t" + textBox6.Text, new Font("Century Gothic", 24, FontStyle.Regular), Brushes.Black, new Point(230));
+            p.dfee = Convert.ToInt32(textBox3.Text);
+            p.rcharges = Convert.ToInt32(textBox4.Text);
+            p.acharges = Convert.ToInt32(textBox5.Text);
+            textBox6.Text = Convert.ToString(p.addtion());
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
