@@ -42,7 +42,7 @@ namespace hospitalmanagementsystem
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            room r1 = new room();
+            addrooms r1 = new addrooms();
             r1.Show();
         }
 

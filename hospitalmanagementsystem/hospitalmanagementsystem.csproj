@@ -55,6 +55,12 @@
     <Compile Include="addcomplain.Designer.cs">
       <DependentUpon>addcomplain.cs</DependentUpon>
     </Compile>
+    <Compile Include="addrooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addrooms.Designer.cs">
+      <DependentUpon>addrooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="appointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,12 +166,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="room.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="room.Designer.cs">
-      <DependentUpon>room.cs</DependentUpon>
-    </Compile>
     <Compile Include="staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addpatient.resx">
       <DependentUpon>addpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addrooms.resx">
+      <DependentUpon>addrooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminlogin.resx">
       <DependentUpon>adminlogin.cs</DependentUpon>
@@ -230,9 +233,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="room.resx">
-      <DependentUpon>room.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="staff.resx">
       <DependentUpon>staff.cs</DependentUpon>
     </EmbeddedResource>
