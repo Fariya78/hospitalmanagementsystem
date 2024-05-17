@@ -45,5 +45,10 @@ namespace hospitalmanagementsystem
             }
             else { MessageBox.Show("complain not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
