@@ -15,7 +15,8 @@ namespace hospitalmanagementsystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loginas());
+            Application.Run(new adddoctor());
+            //loginas
         }
     }
 }

@@ -23,9 +23,9 @@ namespace hospitalmanagementsystem
 
         public void insertrecord()
         {
-            string query = "insert into doctor values('" + id + "', '" + name + "','" + age + "','" + gender + "','" + phone + "','" + password + "','" + address + "','" + email + "')";
+            //string query = "insert into doctor values('" + id + "', '" + name + "','" + age + "','" + gender + "','" + phone + "','" + password + "','" + address + "','" + email + "')";
             DAO d = new DAO();
-            d.insert_doctor(query);
+            //d.insert_doctor(query);
             MessageBox.Show("Doctor inserted", "INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BusinessLogicLayer;
 
 namespace hospitalmanagementsystem
 {
@@ -33,6 +35,18 @@ namespace hospitalmanagementsystem
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //di.id = textBox8.Text;
+            //di.name = textBox1.Text;
+            //di.age =textBox3.Text;
+            //di.gender = comboBox2.Text;
+            //di.phone = textBox4.Text;
+            //di.password = textBox5.Text;
+            //di.address = textBox6.Text;
+            //di.email = textBox7.Text;
+
+            //di.updaterecord();
+            //cleardata();
+            //dataGridView1.DataSource = di.displaydata();
             di.id = textBox8.Text;
             di.name = textBox1.Text;
             di.age = textBox3.Text;
@@ -41,11 +55,10 @@ namespace hospitalmanagementsystem
             di.password = textBox5.Text;
             di.address = textBox6.Text;
             di.email = textBox7.Text;
+            BLL obj = new BLL();
+            obj.UpdateDoctor(di.id, di.name, di.age, di.gender, di.phone, di.password, di.address, di.email);
 
-            di.updaterecord();
-            cleardata();
-            dataGridView1.DataSource = di.displaydata();
-            
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -87,24 +100,37 @@ namespace hospitalmanagementsystem
 
         private void INSERT_button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && comboBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
-            {
-                di.id = textBox8.Text;
-                di.name = textBox1.Text;
-                di.age = textBox3.Text;
-                di.gender = comboBox2.Text;
-                di.phone = textBox4.Text;
-                di.password = textBox5.Text;
-                di.address = textBox6.Text;
-                di.email = textBox7.Text;
+            /* if (textBox1.Text != "" && comboBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
+             {
+                 di.id = textBox8.Text;
+                 di.name = textBox1.Text;
+                 di.age = textBox3.Text;
+                 di.gender = comboBox2.Text;
+                 di.phone = textBox4.Text;
+                 di.password = textBox5.Text;
+                 di.address = textBox6.Text;
+                 di.email = textBox7.Text;
 
-                di.insertrecord();
-                cleardata();
-                dataGridView1.DataSource = di.displaydata();
+                 di.insertrecord();
+                 cleardata();
+                 dataGridView1.DataSource = di.displaydata();
 
 
-            }
-            else { MessageBox.Show("doctor not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+             }
+             else { MessageBox.Show("doctor not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+         -----------------------------------------------------------------------------------------*/
+
+            di.id = textBox8.Text;
+            di.name = textBox1.Text;
+            di.age = textBox3.Text;
+            di.gender = comboBox2.Text;
+            di.phone = textBox4.Text;
+            di.password = textBox5.Text;
+            di.address = textBox6.Text;
+            di.email = textBox7.Text;
+            BLL obj = new BLL();
+            obj.sp_InsertDoctor(di.name,di.age, di.gender, di.phone, di.password, di.address, di.email);
         }
+
     }
 }
