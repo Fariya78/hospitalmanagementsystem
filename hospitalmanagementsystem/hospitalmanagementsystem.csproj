@@ -76,6 +76,12 @@
     </Compile>
     <Compile Include="complains.cs" />
     <Compile Include="DAO.cs" />
+    <Compile Include="DATABASE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DATABASE.Designer.cs">
+      <DependentUpon>DATABASE.cs</DependentUpon>
+    </Compile>
     <Compile Include="diagnosis.cs" />
     <Compile Include="adddoctor.cs">
       <SubType>Form</SubType>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="complain.resx">
       <DependentUpon>complain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DATABASE.resx">
+      <DependentUpon>DATABASE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="diagnostic.resx">
       <DependentUpon>diagnostic.cs</DependentUpon>

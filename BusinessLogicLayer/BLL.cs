@@ -31,5 +31,16 @@ namespace BusinessLogicLayer
 
 
         }
+        public void updatediagnosis(string _Diog_no, string _dname, string _dage, string _dgender, string _dphone, string _dpassword, string _daddress, string _demail)
+        {
+            DAL obj = new DAL();
+            obj.OpenConnection();
+            obj.LoadSpParameters("sp_UpdateDoctor", _Diog_no, _dname, _dage, _dgender, _dphone, _dpassword, _daddress, _demail);
+            obj.ExecuteQuery();
+            obj.UnLoadSpParameters();
+            obj.CloseConnection();
+
+
+        }
     }
 }

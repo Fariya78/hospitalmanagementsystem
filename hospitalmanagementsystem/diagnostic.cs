@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using BusinessLogicLayer;
 
 namespace hospitalmanagementsystem
 {
@@ -33,24 +34,26 @@ namespace hospitalmanagementsystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox8.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "")
-            {
-                ad.dno = textBox1.Text;
-                ad.id = textBox8.Text;
-                ad.name = textBox2.Text;
-                ad.symp = textBox3.Text;
-                ad.diag = textBox4.Text;
-                ad.medic = textBox5.Text;
-                ad.room = textBox6.Text;
-                ad.payment = textBox7.Text;
-                ad.adddiagnosis();
-               
-                cleardata();
-                dataGridView1.DataSource = ad.dispalydiagnosis();
-                dataGridView2.DataSource = ad.disalldiagnosis();
-                gridview();
-            }
-            else { MessageBox.Show("diagnosis not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            //if (textBox1.Text != "" && textBox8.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "")
+            //{
+            ad.dno = textBox1.Text;
+            ad.id = textBox8.Text;
+            ad.name = textBox2.Text;
+            ad.symp = textBox3.Text;
+            ad.diag = textBox4.Text;
+            ad.medic = textBox5.Text;
+            ad.room = textBox6.Text;
+            ad.payment = textBox7.Text;
+            //    ad.adddiagnosis();
+
+            //    cleardata();
+            //    dataGridView1.DataSource = ad.dispalydiagnosis();
+            //    dataGridView2.DataSource = ad.disalldiagnosis();
+            //    gridview();
+            //}
+            //else { MessageBox.Show("diagnosis not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            //BLL obj = new BLL();
+            //obj.Insertdiagnosis(txtPatientId.Text, txtPatientName.Text);
 
         }
         public void cleardata()
@@ -67,20 +70,20 @@ namespace hospitalmanagementsystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ad.dno = textBox1.Text;
-            ad.id = textBox8.Text;
-            ad.name = textBox2.Text;
-            ad.symp = textBox3.Text;
-            ad.diag = textBox4.Text;
-            ad.medic = textBox5.Text;
-            ad.room = textBox6.Text;
-            ad.payment = textBox7.Text;
-            ad.updiagnosis();
+            //ad.dno = textBox1.Text;
+            //ad.id = textBox8.Text;
+            //ad.name = textBox2.Text;
+            //ad.symp = textBox3.Text;
+            //ad.diag = textBox4.Text;
+            //ad.medic = textBox5.Text;
+            //ad.room = textBox6.Text;
+            //ad.payment = textBox7.Text;
+            //ad.updiagnosis();
             
-            cleardata();
-            gridview();
-            dataGridView1.DataSource = ad.dispalydiagnosis();
-            dataGridView2.DataSource = ad.disalldiagnosis();
+            //cleardata();
+            //gridview();
+            //dataGridView1.DataSource = ad.dispalydiagnosis();
+            //dataGridView2.DataSource = ad.disalldiagnosis();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -159,6 +162,49 @@ namespace hospitalmanagementsystem
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void insert_Click(object sender, EventArgs e)
+        {
+            ad.dno = textBox1.Text;
+            ad.id = textBox8.Text;
+            ad.name = textBox2.Text;
+            ad.symp = textBox3.Text;
+            ad.diag = textBox4.Text;
+            ad.medic = textBox5.Text;
+            ad.room = textBox6.Text;
+            ad.payment = textBox7.Text;
+        }
+        //BLL obj = new BLL();
+        //obj.Insertdiagnosis(txtPatientId.Text, txtPatientName.Text);
+        private void Updatebutton2_Click(object sender, EventArgs e)
+        {
+            ad.dno = textBox1.Text;
+            ad.id = textBox8.Text;
+            ad.name = textBox2.Text;
+            ad.symp = textBox3.Text;
+            ad.diag = textBox4.Text;
+            ad.medic = textBox5.Text;
+            ad.room = textBox6.Text;
+            ad.payment = textBox7.Text;
+            BLL obj = new BLL();
+            obj.updatediagnosis(ad.dno, ad.id, ad.name, ad.symp, ad.diag, ad.medic, ad.room, ad.payment);
+            //ad.updiagnosis();
+
+            //cleardata();
+            //gridview();
+            //dataGridView1.DataSource = ad.dispalydiagnosis();
+            //dataGridView2.DataSource = ad.disalldiagnosis();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
         {
 
         }
