@@ -47,6 +47,7 @@ namespace hospitalmanagementsystem
         }
         public void delpayment()
         {
+            //hiding sql connection
             string query = "delete  from payment where PAY_id = '" + challan + "'";
             DAO d = new DAO();
             d.delete_payment(query);

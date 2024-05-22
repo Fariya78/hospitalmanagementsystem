@@ -35,7 +35,7 @@ namespace hospitalmanagementsystem
             string query = "select STAFF_email,STAFF_password from staff where STAFF_email='" + demail + "' and STAFF_password='" + dpassword + "'";
              DAO d = new DAO();
              d.login_staff(query);
-            
+                
 
             if (d.dt.Rows.Count > 0)
             {

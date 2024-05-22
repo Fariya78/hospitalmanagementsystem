@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace hospitalmanagementsystem
 {
-    public class loginadmin
+     class loginadmin
     {
         public string name = "admin";
         public string password = "admin123";
@@ -19,6 +19,7 @@ namespace hospitalmanagementsystem
             this.conc = new SqlConnection(cstring);
 
         }
+        //abstraction
         public void logadmin(string nm, string pass)
         {
             this.name = nm;

@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace hospitalmanagementsystem
 {
+    //inheritance
    public class staffsmain : staffs
     {
         
@@ -30,7 +31,7 @@ namespace hospitalmanagementsystem
             d.update_staffsmain(query);
             MessageBox.Show("staff Updated", "UPDATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
+        //polymorphism
         public override DataTable displaystaff()
         {
             string query = "select * from staff";

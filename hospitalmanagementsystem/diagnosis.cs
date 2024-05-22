@@ -21,42 +21,42 @@ namespace hospitalmanagementsystem
 
    
 
-        public void adddiagnosis()
-        {
+        //public void adddiagnosis()
+        //{
 
-            string query = "insert into diagnosis values('" + dno + "','" + id + "','" + name + "','" + symp + "','" + diag + "','" + medic + "','" + room + "','" + payment + "')";
-            DAO d = new DAO();
-            d.insert_diagnosis(query);
-            MessageBox.Show("DIAGNOSIS inserted", "INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    string query = "insert into diagnosis values('" + dno + "','" + id + "','" + name + "','" + symp + "','" + diag + "','" + medic + "','" + room + "','" + payment + "')";
+        //    DAO d = new DAO();
+        //    d.insert_diagnosis(query);
+        //    MessageBox.Show("DIAGNOSIS inserted", "INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-        }
-        public void updiagnosis()
-        {
+        //}
+        //public void updiagnosis()
+        //{
 
-            string query = "update diagnosis set PATIENT_ids = '" + id + "', PATIENT_names = '" + name + "', SYMPTOMS = '" + symp + "', DIAGNOSIS = '" + diag + "', MEDICINE = '" + medic + "', DIAGNOSIS_room = '" + room + "', DIAG_payment = '" + payment + "'where DIAGNOSIS_id = '" + dno + "' ";
-            DAO d = new DAO();
-            d.update_diagnosis(query);
-            MessageBox.Show("DIAGNOSIS Updated", "UPDATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        //    string query = "update diagnosis set PATIENT_ids = '" + id + "', PATIENT_names = '" + name + "', SYMPTOMS = '" + symp + "', DIAGNOSIS = '" + diag + "', MEDICINE = '" + medic + "', DIAGNOSIS_room = '" + room + "', DIAG_payment = '" + payment + "'where DIAGNOSIS_id = '" + dno + "' ";
+        //    DAO d = new DAO();
+        //    d.update_diagnosis(query);
+        //    MessageBox.Show("DIAGNOSIS Updated", "UPDATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //}
 
-        public DataTable dispalydiagnosis()
-        {
-            string query = "select * from diagnosis where PATIENT_ids = '" + id + "' ";
-            DAO d = new DAO();
-            d.display_onediagnosis(query);
+        //public DataTable dispalydiagnosis()
+        //{
+        //    string query = "select * from diagnosis where PATIENT_ids = '" + id + "' ";
+        //    DAO d = new DAO();
+        //    d.display_onediagnosis(query);
             
-            return d.dt;
+        //    return d.dt;
 
 
-        }
-        public void deletediagnosis()
-        {
-            string query = "delete  from diagnosis where DIAGNOSIS_id = '" + dno + "'";
-            DAO d = new DAO();
-            d.delete_diagnosis(query);
-            MessageBox.Show("diagnosis deleted", "DELETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //}
+        //public void deletediagnosis()
+        //{
+        //    string query = "delete  from diagnosis where DIAGNOSIS_id = '" + dno + "'";
+        //    DAO d = new DAO();
+        //    d.delete_diagnosis(query);
+        //    MessageBox.Show("diagnosis deleted", "DELETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
            
-        }
+        //}
         public DataTable disalldiagnosis()
         {
             string query = "select * from diagnosis";

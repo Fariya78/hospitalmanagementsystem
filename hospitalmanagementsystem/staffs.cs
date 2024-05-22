@@ -31,6 +31,7 @@ namespace hospitalmanagementsystem
             d.update_staff(query);
             MessageBox.Show("staff Updated", "UPDATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        //polymorphism
         public virtual DataTable displaystaff()
         {
             string query = "select * from Ostaff";
