@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,22 +21,18 @@ namespace hospitalmanagementsystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && comboBox2.Text != "" && textBox4.Text != "" && textBox5.Text != "" && comboBox1.Text != "" && textBox7.Text != "")
-            {
-                ip.id = textBox7.Text;
-                ip.pname = textBox1.Text;
-                ip.page = textBox2.Text;
-                ip.pgender = comboBox2.Text;
-                ip.paddress = textBox4.Text;
-                ip.pphone = textBox5.Text;
-                ip.pbgroup = comboBox1.Text;
+            ip.id = textBox7.Text;
+            ip.pname = textBox1.Text;
+            ip.page = textBox2.Text;
+            ip.pgender = comboBox2.Text;
+            ip.paddress = textBox4.Text;
+            ip.pphone = textBox5.Text;
+            ip.pbgroup = comboBox1.Text;
+            BLL obj = new BLL();
+            obj.Insertpatient( ip.pname, ip.page, ip.pgender, ip.paddress, ip.pphone, ip.pbgroup);
+            MessageBox.Show("Insert");
+           
 
-                ip.enterpatient();
-                
-                dataGridView1.DataSource = ip.displaypatient();
-                clear();
-           }
-            else { MessageBox.Show("patient not inserted", "NOT INSERTED", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -47,12 +44,14 @@ namespace hospitalmanagementsystem
             ip.paddress = textBox4.Text;
             ip.pphone = textBox5.Text;
             ip.pbgroup = comboBox1.Text;
+            BLL obj = new BLL();
+            obj.patientupdate( ip.id,ip.pname, ip.page, ip.pgender, ip.paddress, ip.pphone, ip.pbgroup);
+            MessageBox.Show("update");
+            //ip.updatepatient();
 
-            ip.updatepatient();
-            
-            dataGridView1.DataSource = ip.displaypatient();
-            clear();
-           
+            //dataGridView1.DataSource = ip.displaypatient();
+            //clear();
+
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -74,11 +73,15 @@ namespace hospitalmanagementsystem
 
         private void button3_Click(object sender, EventArgs e)
         {
+            BLL obj = new BLL();
             ip.id = textBox7.Text;
-            ip.deletepatient();
+            obj.patientdelete(ip.id);
+            MessageBox.Show("delete");
+            //ip.id = textBox7.Text;
+            //ip.deletepatient();
            
-            dataGridView1.DataSource = ip.displaypatient();
-            clear();
+            //dataGridView1.DataSource = ip.displaypatient();
+            //clear();
         }
         public void clear()
         {

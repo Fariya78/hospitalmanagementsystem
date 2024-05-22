@@ -181,6 +181,9 @@ namespace hospitalmanagementsystem
             ad.medic = textBox5.Text;
             ad.room = textBox6.Text;
             ad.payment = textBox7.Text;
+            BLL obj = new BLL();
+            obj.Insertdiagnosis(ad.id, ad.name, ad.symp, ad.diag, ad.medic, ad.room, ad.payment);
+            MessageBox.Show("Insert");
         }
         //BLL obj = new BLL();
         //obj.Insertdiagnosis(txtPatientId.Text, txtPatientName.Text);
@@ -195,7 +198,8 @@ namespace hospitalmanagementsystem
             ad.room = textBox6.Text;
             ad.payment = textBox7.Text;
             BLL obj = new BLL();
-            obj.updatediagnosis(ad.dno, ad.id, ad.name, ad.symp, ad.diag, ad.medic, ad.room, ad.payment);
+            obj.updatediagnosis(ad.dno,ad.id, ad.name, ad.symp, ad.diag, ad.medic, ad.room, ad.payment);
+            MessageBox.Show("updated");
             //ad.updiagnosis();
 
             //cleardata();
@@ -206,7 +210,10 @@ namespace hospitalmanagementsystem
 
         private void delete_Click(object sender, EventArgs e)
         {
-
+            ad.dno = textBox1.Text;
+            BLL obj = new BLL();
+            obj.deletediagnosis(ad.dno);
+            MessageBox.Show("Delete");
         }
     }
 }
